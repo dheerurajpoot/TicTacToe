@@ -4,39 +4,69 @@
     box-sizing: border-box;
     color: #c8f31d;
 }
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, #18B97E , #68C5DE);
+    align-items: center;
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    height: 6rem;
+    /* background: #fefefe22; */
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.header-logo a,h1{
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+}
+.header-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+.header-menu a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+}
+.header-menu a:hover{
+    color: rgb(0, 0, 255);
+}
+.main-container{
+    padding: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 50%;
+    gap: 2%;
+    flex-wrap: wrap;
+}
 .heading{
-    color: #c8f31d;
-    font-size: 80px;
-    margin-bottom: 30px;
-
+    color: #fff;
+    font-size: 40px;
 }
 .txt-color{
     color: aqua;
 }
-.main{
-    height: 100vh;
-    background-color: #1f1f1f;
-    align-items: center;
-    text-align: center;
-    
-}
 .container{
     height: 90vh;
     width: 100%;
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
-.main-container{
-    height: 60%;
-    width: 50%;
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 .boxes{
     height: 31%;
@@ -64,9 +94,40 @@
 .hidden{
     display: none;
 }
-@media only screen and (max-width: 600px) and (min-width: 300px)  {
+footer{
+    height: 1rem;
+    /* position: absolute; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    bottom: 1rem;
+    position: fixed;
+    /* right: 45%;   */
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+@media only screen and (max-width: 800px) and (min-width: 350px)  {
+    header{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .header-menu{
+        display: none;
+    }
+    .header-logo a{
+        font-size: .6rem;
+    }
     .heading{
-        font-size: 40px;
+        font-size: 30px;
     }
     .boxes{
         height: 32%;
@@ -76,6 +137,7 @@
     .main-container{
         width: 90%;
         height: 50%;
+        padding: 2rem;
     }
     .winner{
         font-size: 25px;
